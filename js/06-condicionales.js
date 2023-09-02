@@ -6,7 +6,7 @@
 podemos decir si es verdad o no, y si se cumple
 se realiza una acción*/
 
-/*Operadore relacionales
+/*Operadores relacionales
 
     Mayor que: >
     Menor que: <
