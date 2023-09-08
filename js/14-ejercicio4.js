@@ -17,7 +17,3 @@ while(numero1 < numero2){
     }
 }
 
-
-var numero1 = parseInt(prompt("Introduce el primer numéro", 0));
-        
-        document.write(numero1 % 7)
