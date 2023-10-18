@@ -31,11 +31,39 @@ for(var i = 0; i < lenguajes.length; i++){
 
 }
 */
+/*
 lenguajes.forEach((elemento,indice,arr)=>{
     document.write("<li>"+indice+"-"+elemento+"</li>");
+    
 });
+*/
+
+// Otra manera de recorrer Arrays o iteraciones
+for(let lenguaje in lenguajes){
+    document.write("<li>"+lenguajes[lenguaje]+"</li>");
+}
 
 document.write("</ul>");
+
+
+//Busquedas en el Array
+
+//Esta es una manera muy sencilla de buscar un elemento
+// en el array, nos regresa la palabra
+
+//var busqueda = lenguajes.find(lenguaje => lenguaje == "PHP");
+ 
+//Con este otro, nos regresa en que index esta localizado
+//el elemento que buscamos
+
+var busqueda = lenguajes.findIndex(lenguaje => lenguaje == "JS");
+
+//El metodo "some" nos ayuda a comprobar si un valor o elemento cumple la condiciom
+//en este caso, si hay elementos mayores a 20
+var precios = [10, 20, 50, 12];
+var busqueda_numero = precios.some(precio => precio >= 20);
+
+console.log(busqueda_numero);
 
 
 
