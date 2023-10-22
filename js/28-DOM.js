@@ -4,7 +4,7 @@
 
 /*
 Le DOM (Document Object Model) est une interface pour vos pages web.
-C'est une API (Application programming interface) 
+Resumant, le DOM est tous les éléments d'un HTML (les balises)
 */
 
 
