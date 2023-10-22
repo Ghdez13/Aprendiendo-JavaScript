@@ -51,8 +51,28 @@ var todosLosDivs  = document.getElementsByTagName('div');
     seccion.append(hr);
     
 
-
-
 //Conseguir elementos por su clase CSS
+var divsRojos = document.getElementsByClassName('rojo');
+var divsAmarillos = document.getElementsByClassName('amarillo');
+divsAmarillos[0].style.background = "yellow";
+
+var div;
+for(div in divsRojos){
+    if(divsRojos[div].className == "rojo"){
+        divsRojos[div].style.background = "red";  
+    }   
+}
+
+//Query Selector todos los ejemplos para un elemento solamente
+var id = document.querySelector("#encabezado");
+console.log(id);
+
+var claseRojo = document.querySelector(".rojo");
+console.log(claseRojo);
+
+var etiqueta = document.querySelector("div");
+console.log(etiqueta);
+
+
 
 
