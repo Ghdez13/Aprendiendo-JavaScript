@@ -73,6 +73,14 @@ console.log(claseRojo);
 var etiqueta = document.querySelector("div");
 console.log(etiqueta);
 
+//Lo siguiente es para seleccionar más de un elemento
+
+var todosLosElementos = document.querySelectorAll(".rojo");
+console.log(todosLosElementos);
+
+var todosLosDivs = document.querySelectorAll("div");
+console.log(todosLosDivs);
+
 
 
 
