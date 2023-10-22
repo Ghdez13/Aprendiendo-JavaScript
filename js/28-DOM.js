@@ -13,7 +13,7 @@ function cambiaColor(color){
 }
 
 
-//Diferentes maneras de seleccionar un elemento
+//Diferentes maneras de seleccionar un elemento con un ID
 
 //var caja = document.getElementById("micaja");
 
@@ -28,5 +28,31 @@ caja.style.color = "white";
 caja.style.padding = "20px";
 caja.class = "Hola";
 caja.className = "Hola Hola2";
-console.log(caja);
+
+
+//Conseguir elementos por sus etiquetas
+var todosLosDivs  = document.getElementsByTagName('div');
+
+    
+    var seccion = document.querySelector("#miseccion");
+    var hr = document.createElement("hr");
+    
+
+    var valor;
+    for(valor in todosLosDivs){
+        if(typeof todosLosDivs[valor].textContent == 'string'){
+            var  parrafo = document.createElement ("p");
+            var texto = document.createTextNode(todosLosDivs[valor].textContent);
+            parrafo.append(texto);
+            seccion.append(parrafo);
+        }
+    }
+
+    seccion.append(hr);
+    
+
+
+
+//Conseguir elementos por su clase CSS
+
 
