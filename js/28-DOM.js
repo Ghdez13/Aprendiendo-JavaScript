@@ -2,12 +2,22 @@
 
 //DOM - Document Object Model
 
+/*
+Le DOM (Document Object Model) est une interface pour vos pages web.
+C'est une API (Application programming interface) 
+*/
+
 
 function cambiaColor(color){
     caja.style.background = color;
 }
 
-var caja = document.getElementById("micaja");
+
+//Diferentes maneras de seleccionar un elemento
+
+//var caja = document.getElementById("micaja");
+
+var caja = document.querySelector("#micaja");
 
 //Con este comando podemos cambiar el texto desde JS
 caja.innerHTML = "Texto modificado desde JS";
