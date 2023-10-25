@@ -6,8 +6,9 @@ par exemple: clicks, mouvements de le mouse, etc.
 
 */
 
-//Les événements du mouse
-
+//Start load
+window.addEventListener("load", _ =>{
+    //Les événements du mouse
 function cambiarColor(){
     var bg = boton.style.background;
     if(bg == "green"){
@@ -19,7 +20,6 @@ function cambiarColor(){
 
     boton.style.padding = "10px";
     boton.style.bord = "1px solid #ccc";
-
 
    return true;
 }
@@ -59,3 +59,6 @@ input.addEventListener("keypress",(event)=> console.log("[Keypress] Pulsaste est
 //Keyup
 var input = document.querySelector("#campo_nombre");
 input.addEventListener("keyup",(event)=> console.log("[Keyup] soltaste esta tecla", String.fromCharCode(event.keyCode)));
+
+}); //End load
+
