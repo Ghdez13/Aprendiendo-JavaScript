@@ -10,7 +10,7 @@ window.addEventListener("load", _ => {
     // Timers
     //Avec "SetInterval" la condition ou le funtion s'ejecute en bucle
     //Avec "setTimeout la condition ou le function s'ejecute seulement une fois"
-
+    
 
 
     function intervalo() {
