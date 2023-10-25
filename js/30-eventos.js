@@ -39,3 +39,23 @@ boton.addEventListener("mouseover", _=> boton.style.background = "pink");
 
 //Mouseout
 boton.addEventListener("mouseout", _=> boton.style.background = "purple");
+
+//Focus
+var input = document.querySelector("#campo_nombre");
+input.addEventListener("focus", _=> console.log("[Focus] Estas haciendo focus dentro del input"));
+
+//Blur
+var input = document.querySelector("#campo_nombre");
+input.addEventListener("blur", _=> console.log("[Blur] Saliste del input"));
+
+//Keydown
+var input = document.querySelector("#campo_nombre");
+input.addEventListener("keydown",(event)=> console.log("[Keydown] Estas pulsando una tecla", String.fromCharCode(event.keyCode)));
+
+//keypress
+var input = document.querySelector("#campo_nombre");
+input.addEventListener("keypress",(event)=> console.log("[Keypress] Pulsaste esta tecla", String.fromCharCode(event.keyCode)));
+
+//Keyup
+var input = document.querySelector("#campo_nombre");
+input.addEventListener("keyup",(event)=> console.log("[Keyup] soltaste esta tecla", String.fromCharCode(event.keyCode)));
