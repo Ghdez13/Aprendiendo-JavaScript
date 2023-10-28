@@ -19,6 +19,9 @@
             border: 3px dashed black;
             padding: 5px;
         }
+        .req{
+            color: red;
+        }
     </style>
 </head>
 
@@ -34,16 +37,17 @@
 
     <div class="box">
         <form action="#" method="POST" id="formulario" onsubmit="return false;" autocomplete="off">
-            <label for="nombre">Nombre:</label> <br />
-            <input type="text" name="nombre" id="nombre" /><br />
+            <label for="nombre">Nombre:<span class="req">*</span></label> <br />
+            <input type="text" name="nombre" id="nombre" required/><br />
 
-            <label for="apellidos">Apellidos:</label><br />
-            <input type="text" name="apellidos" id="apellidos"><br />
+            <label for="apellidos">Apellidos:<span class="req">*</span></label><br />
+            <input type="text" name="apellidos" id="apellidos" required><br />
 
-            <label for="edad">Edad:</label><br />
-            <input type="number" name="edad" id="edad" /><br />
+            <label for="edad">Edad:<span class="req">*</span></label><br />
+            <input type="number" name="edad" id="edad" required/><br />
 
             <input type="submit" value="enviar" id="submit" />
+            <p><span class="req">*</span>-Campo obligatorio</p>
         </form>
     </div>
 

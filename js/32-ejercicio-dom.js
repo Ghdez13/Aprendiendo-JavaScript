@@ -17,8 +17,6 @@ window.addEventListener("load", _ => {
 
         box_dashed.style.display = "block";
 
-        console.log(`Nombre: ${nombre} Apellidos: ${apellidos} Edad: ${edad} años`);
-
         var p_nombre = document.querySelector("#p_nombre span");
         var p_apellidos = document.querySelector("#p_apellidos span");
         var p_edad = document.querySelector("#p_edad span");
