@@ -27,10 +27,7 @@ window.addEventListener("load", _ => {
         
         //on a ajouté le suivant 
         formulario.reset(); 
-
-
-
-        
+     
 
         /* On va utiliser l'option ici-dessus
 

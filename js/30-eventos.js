@@ -30,8 +30,15 @@ var boton = document.querySelector("#boton");
     cambiarColor();
 });*/
 
-//Ici-bas, on peut améliorer le code avec l'utilisation de la flèche
-boton.addEventListener("click", _ => cambiarColor());
+//Ci-bas, on peut améliorer le code avec l'utilisation de la flèche
+//boton.addEventListener("click", _ =>{ 
+    boton.addEventListener("click",function(){
+    cambiarColor();
+    /*C'est quoi le "this"? on peut l'appeler le propriétaire de la fonction */
+    /*Ci-bas, c'est la maniere d'invoquer "this" comme objet */
+    console.log(this);
+    this.style.border = "10px solid black";
+});
 
 
 //Mouse Over

@@ -90,9 +90,11 @@ window.addEventListener("load", _ => {
         console.log(this);
     }
     dog();
+    
+   
 
 
-    /* Ici-bas c'est l'exemple parfait 
+    /* Ci-bas c'est l'exemple parfait 
        d'utiliser "this" dans une function
        avec le mode 'use strict', au contraire 
        de l'exemple ci-dessus
