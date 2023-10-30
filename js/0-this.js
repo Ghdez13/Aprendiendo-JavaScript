@@ -156,3 +156,28 @@ la raison, bien, les fonctions fléchées n'ont pas leur popre "this".
 C'est-à-dire les fonctions fléchées n'ont pas le pouvoir de modifier "this"
 car "this" est définie sur l'élément DOM sur l'ecouter est placé.
 */
+
+/*
+En résumé, la mot-clé "this" fait référence a l'objet en cause,
+c'est-à-dire, par exemple, si nous sommes en créant une fonction,
+la mot-clé "this" sera utilisée pour appeler ou modifier l'objet
+que la fonction elle-même est en train de modifier. 
+
+voici, le dernier exemple: 
+*/
+
+const ejemplo = {
+    color: "azul",
+    func: function() {
+        return this.color;
+    },
+};
+console.log(ejemplo.func());
+
+/*
+L'explication: Dans l'exemple ci-dessus, nous avons deux propriétés,
+la fonction et le couleur. Ici, la mot-clé fait référence à la constante
+ejemplo, puisque c'est l'objet auquel il appartient dans ce contexte.
+Ensuite, en faisant que la fonction nous retourne la propriété "this.color", 
+la code comprend réellement que la propriété à retourner est "ejemplo.color".
+*/
