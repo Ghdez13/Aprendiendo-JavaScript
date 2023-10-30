@@ -90,4 +90,61 @@ elle peut accepter autres paramètre dans la fonction.
 const doSomething2 = function(cat){
     console.log(`${this.id} - ${this.title} - Category: ${cat}`);
 }
-doSomething2.call({id: 5, title: "Awesome post" }, "JavaScript");
+doSomething2.call({id: 5, title: "Awesome post" }, ["JavaScript","React"]);
+
+//------- Méthode "apply"--------------
+
+/*
+La méthode "apply" accepte un objet auquel "this" fera référence
+et un tableau de paramètres de la fonction. On peut voir dans
+le suivant exemple que la reponse est une Array
+ */
+
+const doSomething3 = function (cat1, cat2){
+    console.log(`${this.id} - ${this.title} - Categories: ${cat1}, ${cat2}`);
+}
+doSomething3.apply({id: 5, title: "Awesome post"}, ["JavaScript","React"]);
+
+//------- Méthode "bind"--------------
+
+/*
+La méthode "bind" associe un objet à une fonction de sorte qu'à chaque
+fois qu'on invoque la fonction, "this" fait référence à l'objet.
+*/
+
+const post1 = {id:5, title: "Awesome post", category: "JavaScript"};
+const doSomething4 = function() {
+    return `${this.id} - ${this.title} - ${this.category}`;
+}
+const bindRender = doSomething4.bind(post1);
+console.log(bindRender());
+
+/*
+Nous avons deux manieres différent d'utiliser la méthode "bind"
+voila ci-bas les deux options
+*/
+
+//1
+function sayHello(greet){
+    console.log(`${greet} ${this.name}`);
+}
+const obj = {name: "Jerry"};
+const newFunc1 = sayHello.bind(obj, "Hello");
+newFunc1();
+
+//2
+function sayHello1(greet){
+    console.log(`${greet} ${this.name}`);
+}
+const obj1 = {name: "Jerry"};
+const newFunc2 = sayHello1.bind(obj1);
+newFunc2("Hello");
+
+
+/*
+Finalement, 'c'est vraiment important savoir que lorsqu'on utilise
+les fonctions fléchées la mot-clé "this" n'est pas la meilleure options
+la raison, bien, les fonctions fléchées n'ont pas leur popre "this". 
+C'est-à-dire les fonctions fléchées n'ont pas le pouvoir de changer "this"
+car "this" est définie sur l'élément DOM sur l'ecouter est placé.
+*/
