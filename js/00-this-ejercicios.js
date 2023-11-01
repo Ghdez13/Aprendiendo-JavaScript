@@ -1,7 +1,7 @@
 'use strict'
 
 // Load start
-
+window.addEventListener("load", _=>{
 
 /*
 1.- Variable vs propriété
@@ -9,7 +9,7 @@
 Dans l'exemple suivant lorsqu'on l'exécute, 
 ce qui va être montré?
 */
-window.addEventListener("load", _=>{
+
 
     const objet = {
         message: "1.-exemple. Hello, World",
