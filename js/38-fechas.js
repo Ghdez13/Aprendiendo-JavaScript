@@ -25,6 +25,10 @@ window.addEventListener("load", _ =>{
         `;
 
     console.log(fechaCompleta);
+
+    /*
+    Les exemples suivants sont pour utiliser des méthodes mathématiques.
+    */
     console.log(Math.random()*100); // on multiplie par 100 si nous voulons un nombre à deux chiffres, par 1000 à trois chiffres, etc.
     console.log(Math.ceil(Math.random()*100)); // On utilse (math.ceil) pour obtenir un nombre sans décimal
 
